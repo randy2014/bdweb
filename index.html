@@ -23,7 +23,7 @@
 			}
             .p-title{
 			text-align:center;
-		   color:#FFFFFF;
+		 color:#FFFFFF;
 			 line-height:100px;
 			}			
 			
@@ -53,11 +53,14 @@
 			 <p class="p-title"><font size="7">北渡资源</font> </p>
 		  </div>	 
 		  <div>
-		      <p <p class="p-title" style="color:#000000"><font size="5">欢迎来到北渡生态圈</font> </p>
+		      <p class="p-title" style="color:#000000"><font size="5">欢迎来到北渡生态圈</font> </p>
 		   </div>			 
 		    <div class="div-container">
 		      <button class="bd-button" onclick="openDomain(1)">北渡论坛</button>
 			  <button class="bd-button" onclick="openDomain(2)">北渡知识中心</button>
+			  <button class="bd-button" onclick="openDomain(3)">北渡社群</button>
+			   
+			   <button class="bd-button" onclick="openDomain(4)">北渡付费知识</button>
 		   </div>
 		  
 		<script>
@@ -66,7 +69,11 @@
 		    if(openDomainType ==  1){
 			   domainURL="http://bdforum.site";
 			}else if(openDomainType ==  2){
-			   domainURL="http://38.165.8.7:9801";
+			   domainURL="http://38.6.164.119:9801";
+			}else if(openDomainType == 3){
+			   domainURL="http://bdshopping.website";
+			}else if(openDomainType == 4){
+			   domainURL="http://mini888.site";
 			}
 			window.location.href=domainURL;
 		  }			
