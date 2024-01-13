@@ -44,8 +44,19 @@
 			  font-size:40px;
 			  color:#FFFFFF;
 			}
+			.bd-third-party{
+			  margin-left:280px;
+			  margin-top:30px;
+			  
+			}
+			
+			.bd-info{
+			 margin-left:50px;
+			 margin-top:50px;
+			 margin-right:50px;
+			}
 		</style> 
-		
+			
 	</head>
  
 	<body>
@@ -53,18 +64,26 @@
 			 <p class="p-title"><font size="7">北渡资源</font> </p>
 		  </div>	 
 		  <div>
-		      <p class="p-title" style="color:#000000"><font size="5">欢迎来到北渡生态圈</font> </p>
+		      <p class="p-title" style="color:#000000;font-weight:bold"><font size="10">欢迎来到北渡生态圈</font> </p>
 		   </div>			 
 		    <div class="div-container">
 		      <button class="bd-button" onclick="openDomain(1)">北渡论坛</button>
-			 <button class="bd-button" onclick="openDomain(2)">北渡知识中心</button>
-			 <button class="bd-button" onclick="openDomain(6)">黑料吃瓜(有广告)</button>
-			 <button class="bd-button" onclick="openDomain(5)">北渡卡宝</button> 
-			   
-			   <!--  <button class="bd-button" onclick="openDomain(3)">北渡社群</button>
-			    <button class="bd-button" onclick="openDomain(4)">北渡付费知识</button>
-			    -->
-		   </div>
+			  <button class="bd-button" onclick="openDomain(2)">北渡知识中心</button>
+			  <button class="bd-button" onclick="openDomain(3)">北渡卡宝</button>
+		    </div>
+		    <div class="bd-third-party"> <font size="6" >==第三世界==<font></div>
+			
+		    <div class="div-container">
+		      <button class="bd-button" onclick="openDomain(4)">黑料吃瓜</button>
+		    </div>
+			<div class="bd-info">
+			  <font size="7" style="font-weight:bold">使用说明:</font><br/>
+			   <font size="6">1、北渡圈生态主打零广告,打造一个纯粹的生态圈</font><br/>
+			  <font size="6">2、北渡论坛主打各自学习资料、影视、音乐等资源分享,部分内容通过购买超级账号解锁</font><br/>
+			  <font size="6">3、北渡知识平台主打各位老铁学习，观览作业技巧和世界大奇观,全栈内容需购买超级账号解锁</font><br/>
+			  <font size="6">4、北渡卡宝：通过该平台采购北渡圈平台超级账号</font><br/>
+			  <font size="6">5、第三世界：通过解锁北渡论坛或者北渡知识平台其中之一进行解锁。第三世界不定期免费开放</font><br/>
+			</div>
 		  
 		<script>
 		  function openDomain(openDomainType){
@@ -74,14 +93,10 @@
 			}else if(openDomainType ==  2){
 			   domainURL="http://38.6.164.119:9801";
 			}else if(openDomainType == 3){
-			   domainURL="http://bdshopping.website";
+			    domainURL="http://bdknowledge.site";
 			}else if(openDomainType == 4){
-			   domainURL="http://mini888.site";
-			}else if(openDomainType == 5){
-			   domainURL="http://bdknowledge.site";
-			}else if(openDomainType == 6){
 			   domainURL="https://cgd09.top";
-			}
+			} 
 			window.location.href=domainURL;
 		  }			
 		 
