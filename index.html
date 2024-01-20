@@ -97,11 +97,17 @@
 			</div>
 		  
 		<script>
-		 val vipFlg=getQueryVariable('vipFlg');
-		 var otherParameter=getQueryVariable('otherParameter');
 		 
-		 alert(vipFlg +"--"+otherParameter);
 		  function openDomain(openDomainType){
+		  
+		  
+		    var vipFlg = getQueryVariable('vipFlg');
+		    var otherParameter = getQueryVariable('otherParameter');
+		    if(vipFlg == 1 && openDomainType >3){
+		      alert("非免费开放期间(不定期免费开放),当前请联络客服购买超级账号")
+			  return;
+		   }
+	 
 		    var domainURL="";
 		    if(openDomainType ==  1){
 			   domainURL="http://bdforum.site";
@@ -120,16 +126,17 @@
 		  }			
 		 
 		 
-		 
-	   function getQueryVariable(variable) {
-		 var query = window.location.search.substring(1);
-		 var vars = query.split("&");
-		 for (var i=0;i<vars.length;i++) {
-			var pair = vars[i].split("=");
-			if(pair[0] == variable){return pair[1];}
-		 }
-       return(false);
-       }
+    //获取URL挂载参数
+     function getQueryVariable(variable){
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i=0;i<vars.length;i++) {
+        var pair = vars[i].split("=");
+        if(pair[0] == variable){return pair[1];}
+      }
+     return(false);
+}
+	   
 		</script>
 	</body>
 </html>
