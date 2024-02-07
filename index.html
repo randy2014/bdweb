@@ -74,15 +74,14 @@
 		   </div>			 
 		    <div class="div-container">
 		      <button class="bd-button" onclick="openDomain(1)">北渡论坛</button>
-			  <button class="bd-button" onclick="openDomain(2)">北渡知识中心</button>
-			  <button class="bd-button" onclick="openDomain(3)">北渡卡宝</button>
 		    </div>
 		    <div class="bd-third-party"> <font size="10" >第三世界<font></div>
 			
 		    <div class="div-container">
-		      <button class="bd-button" onclick="openDomain(4)">黑料吃瓜</button>
-		      <button class="bd-button" onclick="openDomain(6)">动漫平台</button>
+		      <button class="bd-button" onclick="openDomain(3)">黑料吃瓜</button>
+		      <button class="bd-button" onclick="openDomain(4)">动漫平台</button>
 		      <button class="bd-button" onclick="openDomain(5)">网剧平台</button>
+		      <button class="bd-button" onclick="openDomain(6)">影视平台</button>
 			  
 			  
 			  
@@ -91,11 +90,9 @@
 			  <font size="7" style="font-weight:bold">使用说明:</font><br/>
 			   <font size="6">1、北渡圈生态主打零广告,打造一个纯粹的生态圈</font><br/>
 			  <font size="6">2、北渡论坛主打各自学习资料、影视、音乐等资源分享,部分内容通过购买超级账号解锁</font><br/>
-			  <font size="6">3、北渡知识平台主打各位老铁学习，观览作业技巧和世界大奇观,全栈内容需购买超级账号解锁</font><br/>
-			  <font size="6">4、北渡卡宝：通过该平台采购北渡圈平台超级账号</font><br/>
-			  <font size="6">5、第三世界：通过解锁北渡论坛或者北渡知识平台其中之一进行解锁。第三世界不定期免费开放</font><br/>
-			  <font size="6">6、北渡卡宝传送门:http://bdknowledge.site</font><br/>
-			  <font size="6">7、北渡卡售后客服:3654169158</font><br/>
+			  <font size="6">3、北渡知识平台主打各位老铁学习，观览作业技巧和世界大奇观,全栈内容需购买超级账号解锁(暂未开放)</font><br/>
+			  <font size="6">4、北渡卡宝：通过该平台采购北渡圈平台超级账号(暂未开放)</font><br/>
+			  <font size="6">5、第三世界免费开放</font><br/>
 			</div>
 		  
 		<script>
@@ -105,24 +102,24 @@
 		  
 		    var vipFlg = getQueryVariable('vipFlg');
 		    var otherParameter = getQueryVariable('otherParameter');
-		    if(vipFlg == 1 && openDomainType >3){
-		      alert("非免费开放期间(不定期免费开放),当前请联络客服购买超级账号")
-			  return;
-		   }
+		   // if(vipFlg == 9 && openDomainType >3){
+		   //   alert("非免费开放期间(不定期免费开放),当前请联络客服购买超级账号")
+		//	  return;
+		 //   }
 	 
 		    var domainURL="";
 		    if(openDomainType ==  1){
 			   domainURL="http://bdforum.site";
-			}else if(openDomainType ==  2){
-			   domainURL="http://38.6.164.119:9801";
-			}else if(openDomainType == 3){
+			}else if(openDomainType == 2){
 			    domainURL="http://bdknowledge.site";
-			}else if(openDomainType == 4){
+			}else if(openDomainType == 3){
 			   domainURL="https://cgd09.top";
+		    }else if(openDomainType == 4){
+			   domainURL=" https://www.mh160.cc/";
 			}else if(openDomainType == 5){
 			   domainURL="https://leziju.com/";
 			}else if(openDomainType == 6){
-			   domainURL=" http://www.hihanman.com";
+			   domainURL=" https://kanta.vip/";
 			}
 			 window.location.href=domainURL;
 		  }			
