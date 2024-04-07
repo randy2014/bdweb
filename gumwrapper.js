@@ -63,6 +63,7 @@ function uploadFile(input) {
 		 var file = e.target.files[0];
 		 var reader = new FileReader();
 		 reader.onload = function(e) {
+		  alert(e.target.result);
 			document.getElementById('imageDisplay').src = e.target.result;
 		 };
     }
