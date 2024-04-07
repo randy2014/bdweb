@@ -41,8 +41,10 @@
 <body>
  <div class ="center-container">
 <div class="file-upload-wrapper">
-    <button type="button" class="file-upload-button">H5打开相册或者拍照</button>
+    <button type="button" class="file-upload-button">H5打开相册或者拍照1</button>
     <input type="file" accept="image/*"  class="file-upload-input" onchange="uploadFile(this)" />
+	<br/>
+	 <img id="imageDisplay" src="" alt="Image preview...">
 	 
 	<br/>
 	 <br/>
@@ -51,16 +53,23 @@
 </div>
  </div>
 <script>
+
+
+   
+
 function uploadFile(input) {
     if (input.files && input.files[0]) {
 	    document.getElementById('selectFileName').innerText  =input.files[0].name;
+		 var file = e.target.files[0];
+		 var reader = new FileReader();
+		 reader.onload = function(e) {
+		  alert(e.target.result);
+			document.getElementById('imageDisplay').src = e.target.result;
+		 };
+		 reader.readAsDataURL(file);
     }
 }
-function uploadFile2(input) {
-    if (input.files && input.files[0]) {
-	    document.getElementById('selectFileName2').innerText  =input.files[0].name;
-    }
-}
+ 
 </script>
  
 </body>
