@@ -46,6 +46,7 @@
 <script>
 function uploadFile(input) {
     if (input.files && input.files[0]) {
+	   alert("选择了文件"+ input.files[0])
         // 处理文件上传的代码
         console.log('文件已选择');
         // 例如可以使用 FileReader 预览图片等
