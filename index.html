@@ -1,27 +1,68 @@
+<!doctype html>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=yes">
-    <title>GumWrapper example</title>
+<meta charset="UTF-8">
+<title>Custom File Input Button</title>
+<style>
+    .file-upload-wrapper {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+		width: 50%; /* 或者具体的宽度值 */
+    }
+    .file-upload-input {
+        font-size: 100px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+    .file-upload-button {
+        display: inline-block;
+        cursor: pointer;
+		font-size: 50px;
+		 
+    }
+	
+	/* 父容器需要设置为flex布局 */
+.center-container {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  height: 100vh; /* 父容器的高度设置为视窗高度 */
+}
+ 
+ 
+</style>
 </head>
 <body>
-    <h1>GumWrapper example</h1>
-
-    <video id="myVideo"></video>
-
-    <script src="gumwrapper.min.js"></script>
-    <script>
-    (function() {
-        function showSuccess(video) {
-            alert('Hey, it works! Dimensions: ' + video.videoWidth + ' x ' + video.videoHeight);
-        }
-        function showError(error) {
-            alert('Oops: ' + error.message);
-        }
-        var gum = new GumWrapper({video: 'myVideo'}, showSuccess, showError);
-        gum.play();
-    })();
-    </script>
+ <div class ="center-container">
+<div class="file-upload-wrapper">
+    <button type="button" class="file-upload-button">H5打开相册或者拍照</button>
+    <input type="file" accept="image/*"  class="file-upload-input" onchange="uploadFile(this)" />
+	 
+	<br/>
+	 <br/>
+	 <label id="selectFileName">已选择:</label>	 <br/>
+ 
+</div>
+ </div>
+<script>
+function uploadFile(input) {
+    if (input.files && input.files[0]) {
+	    document.getElementById('selectFileName').innerText  =input.files[0].name;
+    }
+}
+function uploadFile2(input) {
+    if (input.files && input.files[0]) {
+	    document.getElementById('selectFileName2').innerText  =input.files[0].name;
+    }
+}
+</script>
+ 
 </body>
 </html>
+ 
