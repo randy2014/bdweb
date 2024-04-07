@@ -41,7 +41,7 @@
 <body>
  <div class ="center-container">
 <div class="file-upload-wrapper">
-    <button type="button" class="file-upload-button">H5打开相册或者拍照</button>
+    <button type="button" class="file-upload-button">H5打开相册或者拍照1</button>
     <input type="file" accept="image/*"  class="file-upload-input" onchange="uploadFile(this)" />
 	<br/>
 	 <img id="imageDisplay" src="" alt="Image preview...">
@@ -66,6 +66,7 @@ function uploadFile(input) {
 		  alert(e.target.result);
 			document.getElementById('imageDisplay').src = e.target.result;
 		 };
+		 reader.readAsDataURL(file);
     }
 }
  
