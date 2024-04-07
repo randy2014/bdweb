@@ -23,7 +23,8 @@
     .file-upload-button {
         display: inline-block;
         cursor: pointer;
-		font-size: 80px;
+		font-size: 50px;
+		 
     }
 	
 	/* 父容器需要设置为flex布局 */
@@ -40,17 +41,17 @@
 <body>
  <div class ="center-container">
 <div class="file-upload-wrapper">
-    <button type="button" class="file-upload-button">打开相册或者拍照(Demo测试)</button>
+    <button type="button" class="file-upload-button">H5打开相册或者拍照(Demo)</button>
     <input type="file" accept="image/*"class="file-upload-input" onchange="uploadFile(this)" />
+	<br/>
+	 <br/>
+	 <label id="selectFileName">已选择:</label
 </div>
  </div>
 <script>
 function uploadFile(input) {
     if (input.files && input.files[0]) {
-	   alert("选择了文件"+ input.files[0])
-        // 处理文件上传的代码
-        console.log('文件已选择');
-        // 例如可以使用 FileReader 预览图片等
+	    document.getElementById('selectFileName').innerText  =input.files[0].name;
     }
 }
 </script>
